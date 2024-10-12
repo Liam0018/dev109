@@ -42,6 +42,8 @@
  border:solid 1px;
  padding: 10px;
  margin:20px;
+ position: absolute;
+ bottom: 0; 
 }
 
 #container {
