@@ -1,4 +1,5 @@
-@import "http://openfontlibrary.org/face/just-letters"
+@import "http://openfontlibrary.org/face/just-letters";
+
 #title {
  position:fixed;
  top:0px;
