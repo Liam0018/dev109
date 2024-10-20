@@ -1,27 +1,54 @@
-	* {
+
+*{
 				font-family: Arial, Verdana, sans-serif;
 				color: #665544;
-				text-align: center;}
-			body {
-				width: 90%;
-				margin: 0 auto;}
-			#content {
+  text-align: center;}
+ h1 {
+           font-family: 'GlacialIndifferenceRegular';
+           font-weight: normal;
+           font-style: normal;
+}  
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2022/09/21/17/02/blue-background-7470781_1280.jpg");
+                  width: 90%;
+              margin: 0 auto;}
+#content { 
 				overflow: auto;}
-			#nav, #feature, #footer {
+#nav, #feature, #footer {
 				margin: 1%;}
-			.column1, .column2, .column3 {
+.column1, .column2, .column3 {
 				width: 31.3%;
 				float: left;
 				margin: 1%;}
-			.column3 {
-				margin-right: 0%;}
-			li {
+.column3 {
+              margin-right: 0%;}
+li {
 				display: inline;
 				padding: 0.5em;}
-			#nav, #footer {
-				background-color: #efefef;
+#nav, #footer {
 				padding: 0.5em 0;}
-			#feature, .article {
+#nav {
+            background-color: #a1ff98;
+}
+img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+}
+#feature {
+            background-color: #7ce9e4;
+}
+#footer {
+            background-color: #f6ff98;
+}
+#feature, .article {
 				height: 10em;
-				margin-bottom: 1em;
-				background-color: #efefef;}
+              margin-bottom: 1em;}
+.column1 { 
+  background-color: #fea3a3;}
+.column2 {
+  background-color: #fed1a3;}
+.column3 {
+  background-color: #fea3f1;}
+				
