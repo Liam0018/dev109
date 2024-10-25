@@ -19,5 +19,6 @@ if (operator === 'addition') {
 }
 
 // Write the message into the page
+let table = prompt("Please enter a multiplication table", "1");
 var el = document.getElementById('blackboard');
 el.innerHTML = msg;
