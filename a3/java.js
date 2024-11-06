@@ -4,82 +4,64 @@
 // var symbol ="*";
 
 function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-downRight(pHeight, pColorEven, pColorOdd, pSymbol);
+    upRhombus(pHeight, pColorEven, pColorOdd, pSymbol);
+    downRhombus(pHeight, pColorEven, pColorOdd, pSymbol);
 }
 
-function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
-var rLine ="";
-for (i=0;i<pHeight;i++){
-rLine +="<p>";
-//Create each line on the Rhombus
-for(j=0;j<=i;j++){
+function upRhombus(pHeight, pColorEven, pColorOdd, pSymbol){
+  var rLine ="";
 
-//Is the position even or odd so we change the color
-if (j%2)
-//even
-rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-else
-//odd
-rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+  for (i=0;i<=pHeight;i++){
+    rLine +="<p>";
+    for (k=0;k<(pHeight-i);k++){
+      rLine +="<span style='color: #ffffff;'>*</span>"
+    }
 
-}
-rLine +="</p>";
-// console.log(rLine);
+    //Create each line on the Rhombus
+    for(j=0;j<(i*2);j++){
 
-}
+      //Is the position even or odd so we change the color
+      if (j%2)
+        //even
+        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
+      else
+        //odd
+        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
 
-document.getElementById("upRight").innerHTML = rLine;
-}
+    }
+    rLine +="</p>";
+    // console.log(rLine);
 
-function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
-var rLine ="";
-for (i=pHeight;i > 0;i--){
-rLine +="<p>";
-//Create each line on the Rhombus
-for(j=0;j<i;j++){
+  }
 
-//Is the position even or odd so we change the color
-if (j%2)
-//even
-rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-else
-//odd
-rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-
-}
-rLine +="</p>";
-// console.log(rLine);
-
+  document.getElementById("upRhombus").innerHTML = rLine;
 }
 
-document.getElementById("downRight").innerHTML = rLine;
-}
+function downRhombus(pHeight, pColorEven, pColorOdd, pSymbol){
+  var rLine ="";
 
-function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-var rLine ="";
-for (i=0;i<pHeight;i++){
-rLine +="<p>";
-for (k=0;k<(pHeight-i);k++){
-rLine +="<span style='color: #ffffff;'>*</span>"
-}
-//Create each line on the Rhombus
-for(j=0;j<=i;j++){
+  for (i=pHeight;i > 0;i--){
+    rLine +="<p>";
+    for (k=pHeight;k>i;k--){
+      rLine +="<span style='color: #ffffff;'>*</span>"
+    }
 
-//Is the position even or odd so we change the color
-if (j%2)
-//even
-rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-else
-//odd
-rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+    //Create each line on the Rhombus
+    for(j=0;j<(i*2);j++){
 
-}
-rLine +="</p>";
-// console.log(rLine);
+      //Is the position even or odd so we change the color
+      if (j%2)
+        //even
+        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
+      else
+        //odd
+        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
 
-}
+    }
+    rLine +="</p>";
+    // console.log(rLine);
 
-document.getElementById("upLeft").innerHTML = rLine;
+  }
+
+  document.getElementById("downRhombus").innerHTML = rLine;
 }
