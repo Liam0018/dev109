@@ -5,24 +5,26 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="art4.css" />
         <title>Artifact 04</title>
-        <style> p.dotted {border-style: dotted;} 
+        <style> div.dotted {border-style: dotted;} </style>
     </head>
     <body>
+      <div class="dotted">
+       
         <form id="myform" action="ty.html" onsubmit="isValid();">
-            <p>
-                <label for='FirstName'>First Name:</label>
-                <input type="text" id="FirstName" name="FirstName" />
-            </p>
-            <div class="warning" id="fname"></div>
             
-            <p>
-                <input type="submit" id="submit" name="submit" value="Submit">
-            </p>
+           <label for='FirstName'>First Name:</label>
+           <input type="text" id="FirstName" name="FirstName" />
+            
+           <div class="warning" id="fname"></div>
+            
+           <input type="submit" id="submit" name="submit" value="Submit" />
         
-            <div class="warning" id="submiterror"></div>
+           <div class="warning" id="submiterror"></div>
         
         </form>
-</style>        
+      
+          </div>
+        
     <script src="validator.js" type="text/javascript"></script>
     </body>
 </html>
