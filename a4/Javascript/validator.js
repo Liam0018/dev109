@@ -1,8 +1,8 @@
 function isValid() {
     if (firstName() //&&
        // lastName()
-    )
-    return true;
+     )
+      return true;
     else
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
         event.preventDefault();
@@ -10,6 +10,7 @@ function isValid() {
 }
 
 FirstName.addEventListener('blur', firstName, false);
+
 function firstName(){
     //1) Create variable
     var validFirstname=false;
@@ -35,4 +36,4 @@ function firstName(){
 
     //5) return status of each field
     return (validFirstname);
-};
+}
