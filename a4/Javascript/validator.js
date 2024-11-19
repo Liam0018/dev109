@@ -1,5 +1,6 @@
 function isValid() {
-    if (firstName() && lastName() && Email() && Phone() && Username()) {
+    if (firstName() && lastName() && Email() && Phone() && Username() &&
+       Password() && Address() && City()) {
       
       document.getElementById("submiterror").innerHTML =""
       return true;
@@ -24,7 +25,7 @@ function firstName(){
         errorMessages += "<p>The first name is required and cannot be greater than 20 characters</p>";
         console.log("First name invalid — length")
         } else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
+            errorMessages += "<p>Invalid character in last name (accepts only A-Z, a-z, and ,.'-)</p>";
             console.log("First name invalid — bad characters")
         } else {
                 validFirstname = true;
@@ -50,7 +51,7 @@ var errorMessages = "";
         errorMessages += "<p>The last name is required and cannot be greater than 50 characters</p>";
         console.log("Last name invalid — length")
         } else if (lastname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
+            errorMessages += "<p>Invalid character in last name (accepts only A-Z, a-z, and ,.'-)</p>";
             console.log("Last name invalid — bad characters")
         } else {
                 validLastname = true;
@@ -118,3 +119,60 @@ function Username() {
   return (validUsername);
   
 }
+
+function Password() {
+  var password = document.getElementById("Password").value;
+  var errorMessages = "";
+  var validPassword = false;
+  
+  if (password.length >7 || password===null || password==="") {
+  errorMessages += "<p>Invalid password, maximum of 7 characters</p>";
+  
+  } else {
+    validPassword = true;
+  }
+  
+  document.getElementById("password").innerHTML = errorMessages;
+
+  return (validPassword);
+  
+}
+
+function Address() {
+  var address = document.getElementById("Address").value;
+  var errorMessages = "";
+  var validAddress = false;
+  
+  if (address.length >50 || address===null || address==="") {
+  errorMessages += "<p>Invalid address, maximum of 50 characters</p>";
+  
+  } else {
+    validAddress = true;
+  }
+  
+  document.getElementById("address").innerHTML = errorMessages;
+
+  return (validAddress);
+  
+}
+
+function City() {
+  var city = document.getElementById("City").value;
+  var errorMessages = "";
+  var validCity = false;
+  
+  if (city.length >30 || city===null || city==="") {
+  errorMessages += "<p>Invalid city, maximum of 30 characters</p>";
+  
+  } else {
+    validCity = true;
+  }
+  
+  document.getElementById("city").innerHTML = errorMessages;
+
+  return (validCity);
+  
+}
+
+
+
