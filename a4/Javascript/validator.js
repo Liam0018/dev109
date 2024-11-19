@@ -1,5 +1,5 @@
 function isValid() {
-    if (firstName() && lastName()) {
+    if (firstName() && lastName() && Email() && Phone() && Username()) {
       
       document.getElementById("submiterror").innerHTML =""
       return true;
@@ -71,9 +71,50 @@ var atpos = userEmail.indexOf("@");
 var dotpos = userEmail.lastIndexOf(".");
 if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
   errorMessages += "<p>Invalid email address.</p>";
-  validForm = false;
     // send error message. For example:  errorMessages = "<p>Invalid email</p>";
 } else {
-   validEmail = true; //Or assign the value to a variable. For example validEmail = true
+ validEmail = true; //Or assign the value to a variable. For example validEmail = true
 }
+   //4) Send error message to HMTL
+   document.getElementById("email").innerHTML = errorMessages;
+//5) return status of each field
+return (validEmail);
+}
+
+function Phone() {
+  var phone = document.getElementById("Phone").value;
+  var errorMessages = "";
+  var validPhone = false;
+
+if (isNaN(phone) || phone.length >15 || phone===null || phone==="") {
+  errorMessages += "<p>Invalid phone number.</p>";
+
+  //send error message. For example errorMessages = "<p>Invalid phone number </p>";
+} else {
+  validPhone = true;
+}
+
+   document.getElementById("phone").innerHTML = errorMessages;
+
+  return (validPhone);
+  
+  
+}
+
+function Username() {
+  var username = document.getElementById("Username").value;
+  var errorMessages = "";
+  var validUsername = false;
+  
+  if (username.length >12 || username===null || username==="") {
+  errorMessages += "<p>Invalid username, maximum of 12 characters</p>";
+  
+  } else {
+    validUsername = true;
+  }
+  
+  document.getElementById("username").innerHTML = errorMessages;
+
+  return (validUsername);
+  
 }
