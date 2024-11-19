@@ -1,13 +1,12 @@
 function isValid() {
-    if (firstName() && lastName()) //&&
-       
+    if (firstName() && lastName()) {
       
-      
+      document.getElementById("submiterror").innerHTML =""
       return true;
-    else
+    }  else {
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
         event.preventDefault();
-        return false;
+        return false; }
 }
 
 FirstName.addEventListener('blur', firstName, false);
@@ -30,7 +29,7 @@ function firstName(){
         } else {
                 validFirstname = true;
                 console.log("First name valid")
-        };
+        }
 
     //4) Send error message to HTML
     document.getElementById("fname").innerHTML = errorMessages;
@@ -54,13 +53,27 @@ var errorMessages = "";
             errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
             console.log("Last name invalid — bad characters")
         } else {
-                validFirstname = true;
+                validLastname = true;
                 console.log("Last name valid")
-        };
+        }
 
   //4) Send error message to HMTL
    document.getElementById("lname").innerHTML = errorMessages;
 //5) return status of each field
 return (validLastname);
 
+}
+function Email() {
+var userEmail = document.getElementById("Email").value;
+var errorMessages = "";
+var validEmail = false;
+var atpos = userEmail.indexOf("@");
+var dotpos = userEmail.lastIndexOf(".");
+if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
+  errorMessages += "<p>Invalid email address.</p>";
+  validForm = false;
+    // send error message. For example:  errorMessages = "<p>Invalid email</p>";
+} else {
+   validEmail = true; //Or assign the value to a variable. For example validEmail = true
+}
 }
