@@ -1,6 +1,6 @@
 function isValid() {
     if (firstName() && lastName() && Email() && Phone() && Username() &&
-       Password() && Address() && City()) {
+       Password() && Address() && City() && Country()  && State() && ZipCode()) {
       
       document.getElementById("submiterror").innerHTML =""
       return true;
@@ -174,5 +174,61 @@ function City() {
   
 }
 
+function ZipCode() {
+  var zipcode = document.getElementById("Zipcode").value;
+    var country = document.getElementById("Country").value;
+  var errorMessages = "";
+  var validZipCode = false;
+  
+  if ((isNaN(zipcode) || zipcode.length >5 || zipcode===null || zipcode==="") && country==="USA") {
+  errorMessages += "<p>Invalid zipcode, maximum of 5 numbers</p>";
+  
+  } else {
+    validZipCode = true;
+  }
+  
+  document.getElementById("zipcode").innerHTML = errorMessages;
 
+  return (validZipCode);
+  
+}
+
+function State() {
+  var state = document.getElementById("State").value;
+  var country = document.getElementById("Country").value;
+
+  var errorMessages = "";
+  var validState = false;
+  
+  if ((state===null || state==="blank") && country==="USA") {
+  errorMessages += "<p>please select a state</p>";
+  
+  } else {
+    validState = true;
+  }
+  
+  document.getElementById("state").innerHTML = errorMessages;
+
+  return (validState);
+  
+}
+
+function Country() {
+  var country = document.getElementById("Country").value;
+  var errorMessages = "";
+  var validCountry = false;
+    
+
+  if (country===null || country==="blank") {
+  errorMessages += "<p>please select a country</p>";
+  
+  } else {
+    validCountry = true;
+  }
+  
+  document.getElementById("country").innerHTML = errorMessages;
+
+  return (validCountry);
+  
+}
 
