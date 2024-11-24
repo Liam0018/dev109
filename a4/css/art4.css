@@ -1,7 +1,19 @@
-div {
-  border: 5px black;
-  background-color: lightblue;
+/* border properties */
+.dotted {
+    width: 60%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border: 2px dotted black; 
+    box-sizing: border-box;
+    background-color: lightblue;
 }
+
+/* red text for invalidation */
 .warning {
     color:red;
+}
+
+/* text formatting */
+label, input, select {
+    margin: 5px 0;
 }
