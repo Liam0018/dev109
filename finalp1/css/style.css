@@ -19,10 +19,15 @@ display:none;
     width: 200px;
 }
 
-#content p.d {
-    max-width: 600px;
+.interests-container video {
+  
+  margin-right: 20px;
 }
 
+#content p.d {
+    max-width: 600px;
+
+}
 .about-container {
     display: flex;
     align-items: flex-start;
