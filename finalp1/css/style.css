@@ -21,6 +21,7 @@ display:none;
 
 #content p.d {
     max-width: 600px;
+}
 
 .about-container {
     display: flex;
