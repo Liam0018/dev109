@@ -1,9 +1,22 @@
+
+
 audio {
 display:none;
 }
 
 #content {
     display: block; /* Make #content block level to stack elements */
+}
+
+.interests-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.interests-container img {
+    margin-right: 20px;
+    width: 200px;
 }
 
 .about-container {
