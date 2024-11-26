@@ -1,3 +1,7 @@
+audio {
+display:none;
+}
+
 #content {
     display: block; /* Make #content block level to stack elements */
 }
