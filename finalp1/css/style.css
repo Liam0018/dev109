@@ -1,5 +1,20 @@
-audio {
-display: none;
+#content {
+    display: block; /* Make #content block level to stack elements */
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px; /* Adds space between the heading and content */
+}
+
+.about-container img {
+    margin-right: 20px; /* Add space between the image and text */
+    width: 200px; /* Adjust the image size */
+}
+
+#content p.c {
+    max-width: 600px; /* Optional: limit the text width */
 }
 
 body {
