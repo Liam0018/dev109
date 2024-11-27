@@ -1,49 +1,41 @@
 
 /* removed audio menu for cleaner page appearance */
 audio {
-display:none;
+  display:none;
 }
-
 /* formatting for images and paragraph */
 #content {
-    display: block;
+  display:block;
 }
-
 .interests-container {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
+  display:flex;
+  align-items:flex-start;
+  margin-top:20px;
 }
-
 .interests-container img {
-    margin-right: 20px;
-    width: 200px;
+  margin-right:20px;
+  width:200px;
 }
-
 .interests-container video {
-  
-  margin-right: 20px;
+  margin-right:20px;
 }
-
 #content p.d {
-    max-width: 600px; /* paragraph formatting for interests.html */
-
+  max-width:600px;
+  /* paragraph formatting for interests.html */
 }
 .about-container {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px; 
+  display:flex;
+  align-items:flex-start;
+  margin-top:20px;
 }
-
 .about-container img {
-    margin-right: 20px; 
-    width: 200px; 
+  margin-right:20px;
+  width:200px;
 }
-
 #content p.c {
-    max-width: 600px; /* about.html paragraph formatting */
+  max-width:600px;
+  /* about.html paragraph formatting */
 }
-
 body {
   font-family:Avenir,Arial,sans-serif;
   margin:0;
