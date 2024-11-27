@@ -1,11 +1,12 @@
 
-
+/* removed audio menu for cleaner page appearance */
 audio {
 display:none;
 }
 
+/* formatting for images and paragraph */
 #content {
-    display: block; /* Make #content block level to stack elements */
+    display: block;
 }
 
 .interests-container {
@@ -31,16 +32,16 @@ display:none;
 .about-container {
     display: flex;
     align-items: flex-start;
-    margin-top: 20px; /* Adds space between the heading and content */
+    margin-top: 20px; 
 }
 
 .about-container img {
-    margin-right: 20px; /* Add space between the image and text */
-    width: 200px; /* Adjust the image size */
+    margin-right: 20px; 
+    width: 200px; 
 }
 
 #content p.c {
-    max-width: 600px; /* Optional: limit the text width */
+    max-width: 600px;
 }
 
 body {
@@ -194,6 +195,7 @@ a:hover {
 #footer a:hover {
   border-bottom:1px dotted #ccc;
 }
+/* validated.html formatting */
 #validation-left {
   float:left;
 }
