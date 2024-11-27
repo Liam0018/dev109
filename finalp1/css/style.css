@@ -192,7 +192,8 @@ a:hover {
   float:left;
 }
 #validation-right {
-  float:right;
+  float:left;
+  padding-left: 20px;
 }
 .left {
   float:left;
