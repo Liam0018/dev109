@@ -1,3 +1,4 @@
+//Validation function
 function isValid() {
   if (Name() && Email() && Comment()) {
 
@@ -8,13 +9,6 @@ function isValid() {
         event.preventDefault();
         return false; }
   }
-
-
-
-
-
-
-
 
 //Name function script
 function Name() {
