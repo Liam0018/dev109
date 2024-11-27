@@ -26,7 +26,7 @@ display:none;
 }
 
 #content p.d {
-    max-width: 600px;
+    max-width: 600px; /* paragraph formatting for interests.html */
 
 }
 .about-container {
@@ -41,7 +41,7 @@ display:none;
 }
 
 #content p.c {
-    max-width: 600px;
+    max-width: 600px; /* about.html paragraph formatting */
 }
 
 body {
