@@ -18,7 +18,7 @@ function isValid() {
 
 //Name function script
 function Name() {
-  var name = document.getElementById("name").value;
+  var name = document.getElementById("Name").value;
   var errorMessages = "";
   var validName = false;
   
@@ -37,7 +37,7 @@ function Name() {
   
   //Email function script
 function Email() {
-var userEmail = document.getElementById("email").value;
+var userEmail = document.getElementById("Email").value;
 var errorMessages = "";
 var validEmail = false;
 var atpos = userEmail.indexOf("@");
@@ -56,7 +56,7 @@ return (validEmail);
   
   //Comment function script
 function Comment() {
-  var comment = document.getElementById("comment").value;
+  var comment = document.getElementById("Comment").value;
   var errorMessages = "";
   var validComment = false;
   
